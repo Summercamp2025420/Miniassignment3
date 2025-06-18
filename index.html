@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    
+     <form id="Ange1
+     Form">
+    <input type="text" id="nameInput" placeholder="Angel Martinez">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('nameForm');
+    const input = document.getElementById('nameInput');
+    const welcomeText = document.getElementById('welcomeText');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      const name = input.value.trim(); 
+      if (name !== "") {
+        welcomeText.textContent = Welcome, ${Angel!}!;
+      } else {
+        welcomeText.textContent = Welcome!; 
+      }
+    });
+  </script>
+
+</body>
+</html>
+<!--
+run this to host site: php -S localhost:3006 -t ./
+-->
