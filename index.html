@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome Page</title>
+  <title>Welcome Page</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
-    
-     <form id="Ange1
-     Form">
+  <h1 id="welcomeText">Welcome!</h1>
+
+  <form id="nameForm">
     <input type="text" id="nameInput" placeholder="Angel Martinez">
     <button type="submit">Submit</button>
   </form>
@@ -18,16 +17,15 @@
     const welcomeText = document.getElementById('welcomeText');
 
     form.addEventListener('submit', function(event) {
-      event.preventDefault(); 
-      const name = input.value.trim(); 
+      event.preventDefault();
+      const name = input.value.trim();
       if (name !== "") {
-        welcomeText.textContent = Welcome, ${Angel!}!;
+        welcomeText.textContent = `Welcome, ${name}!`;
       } else {
-        welcomeText.textContent = Welcome!; 
+        welcomeText.textContent = "Welcome!";
       }
     });
   </script>
-
 </body>
 </html>
 <!--
